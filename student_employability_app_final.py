@@ -19,8 +19,10 @@ import matplotlib.pyplot as plt
 
 # --- Load Model & Scaler ---
 # Load trained SVM model
-with open("svm_model.pkl", "rb") as f:
-    model = pickle.load(f)
+import joblib
+
+model = joblib.load("employability_predictor.pkl")
+scaler = joblib.load("scaler.pkl")
 
 # Load scaler used in training
 with open("scaler.pkl", "rb") as f:
