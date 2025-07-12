@@ -22,11 +22,9 @@ import matplotlib.pyplot as plt
 import joblib
 
 model = joblib.load("employability_predictor.pkl")
-scaler = joblib.load("scaler.pkl")
 
 # Load scaler used in training
-with open("scaler.pkl", "rb") as f:
-    scaler = pickle.load(f)
+scaler = joblib.load("scaler.pkl")
 
 # --- Utility Functions ---
 
